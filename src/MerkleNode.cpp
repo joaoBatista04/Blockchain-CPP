@@ -22,7 +22,7 @@ std::string MerkleNode::calculateHash(const std::string& data) const{
 
     std::string hashStr;
 
-    for (int i = 0; i < SHA256_DIGEST_LENGTH; ++i) {
+    for(int i = 0; i < SHA256_DIGEST_LENGTH; ++i){
         hashStr += hash[i];
     }
 

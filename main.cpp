@@ -4,16 +4,6 @@
 #include "./includes/Block.hpp"
 #include "./includes/TransactionNode.hpp"
 
-std::string hexToDecimal(const std::string& hex) {
-    try {
-        unsigned long long decimalValue = std::stoull(hex, 0, 16);
-        return std::to_string(decimalValue);
-    } catch (const std::invalid_argument& e) {
-        std::cerr << "Erro: A string hexadecimal não é válida." << std::endl;
-        return "Erro na conversão";
-    }
-}
-
 int main(){
     TransactionNode* transactionListHead = new TransactionNode("Transaction 1");
     transactionListHead->nextNode = new TransactionNode("Transaction 2");

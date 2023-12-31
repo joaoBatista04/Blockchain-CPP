@@ -17,7 +17,7 @@ vector<std::string> Block::extractTransactionData() const{
     std::vector<std::string> transactionData;
     TransactionNode* current = transactionListHead;
     
-    while (current) {
+    while(current){
         transactionData.push_back(current->transactionData);
         current = current->nextNode;
     }
@@ -36,7 +36,7 @@ std::string Block::calculateBlockHash() const{
 
     std::string calculatedHash;
 
-    for (int i = 0; i < SHA256_DIGEST_LENGTH; ++i) {
+    for(int i = 0; i < SHA256_DIGEST_LENGTH; ++i){
         calculatedHash += hash[i];
     }
 
